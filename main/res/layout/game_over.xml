@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gameOverLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"/>
+
+    <ImageView
+        android:id="@+id/menuBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:src="@drawable/menubackground"
+        android:scaleType="fitCenter"/>
+
+    <LinearLayout
+        android:id="@+id/centerContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+
+        <!-- Final Score TextView -->
+        <TextView
+            android:id="@+id/finalScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puntos: 0"
+            android:textSize="40sp"
+            android:fontFamily="@font/fontttt"
+            android:textColor="#5ae38e"
+            android:gravity="center"/>
+
+
+        <!-- High Score TextView -->
+        <TextView
+            android:id="@+id/highScoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rurok ng puntos: 0"
+            android:textSize="35sp"
+            android:fontFamily="@font/fontttt"
+            android:textColor="#FFD700"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Container for the two buttons -->
+        <RelativeLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!-- Play Again Button -->
+            <ImageButton
+                android:id="@+id/playAgainButton"
+                android:layout_width="110dp"
+                android:layout_height="125dp"
+                android:src="@drawable/returnbutton"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="Play Again"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <!-- Home Button -->
+            <ImageButton
+                android:id="@+id/homeButton"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:src="@drawable/homebutton"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:contentDescription="Home Button"
+                android:layout_toEndOf="@id/playAgainButton"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
